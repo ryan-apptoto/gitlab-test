@@ -1,0 +1,8 @@
+before_script:
+  - gem install bundler --no-ri --no-rdoc
+  - bundle install --jobs $(nproc)  "${FLAGS[@]}"
+  - bundle exec rake db:test:prepare
+
+test_unit:
+  script:
+    - bundle exec rake test
