@@ -11,6 +11,8 @@ stages:
 
 test_unit:
   stage: test
+  tags:
+    - test
   script:
     - bundle exec rake test
   only:
