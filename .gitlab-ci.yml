@@ -4,7 +4,7 @@ before_script:
   - which ruby
   - gem install bundler --no-ri --no-rdoc
   - bundle install --jobs $(nproc)  "${FLAGS[@]}"
-  - bundle exec rake db:migrate RAILS_ENV=test
+  - rake db:migrate RAILS_ENV=test
 
 stages:
   - test
