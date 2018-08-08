@@ -6,6 +6,12 @@ before_script:
   - bundle install --jobs $(nproc)  "${FLAGS[@]}"
   - bundle exec rake db:test:prepare
 
+stages:
+  - test
+
 test_unit:
+  stage: test
   script:
     - bundle exec rake test
+  only:
+    - pushes
