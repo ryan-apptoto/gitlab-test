@@ -44,9 +44,7 @@ jobs:
       - run:
           name: run tests
           command: |
-            mkdir /test/reports
             TEST_FILES="$(circleci tests glob "test/**/*_test.rb" | circleci tests split --split-by=timings)"
-
             bundle exec rake ci:setup:testunit test
 
       # collect reports
