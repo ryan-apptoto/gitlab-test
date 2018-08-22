@@ -38,3 +38,4 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 gem "test-unit"
+gem "ci_reporter_test_unit"
