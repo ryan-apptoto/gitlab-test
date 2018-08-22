@@ -49,7 +49,7 @@ jobs:
 
       # collect reports
       - store_test_results:
-          path: /test/reports
+          path: ~/repo/test/reports
       - store_artifacts:
           path: /tmp/test-results
           destination: test-results
